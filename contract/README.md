@@ -14,5 +14,5 @@ npx hardhat run scripts/deploy.ts
 
 ## Specify the network configuration
 ```shell
-npx hardhat run --network localhost scripts/deploy.ts
+npx hardhat run scripts/deploy.ts --network goerli
 ```
