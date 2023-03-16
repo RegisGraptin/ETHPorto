@@ -53,7 +53,11 @@ contract EventContract {
 
     function joinEvent(uint eventid) public {
         // Check that the event is valid
-        require(eventid < event_id);
+        require(eventid != 0);
+        require(eventid <= event_id);
+        
+        // Check that the user is not have already joined the event
+        // => Cost more fees to iterate over all the data
 
         // TODO :: Check condition (date, event registration open...)
 

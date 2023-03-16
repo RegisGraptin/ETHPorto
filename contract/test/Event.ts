@@ -93,9 +93,18 @@ describe("Event", function() {
             "Porto"
         );
         
-        event.join()
+        let attendees = await event.getAttendees(1);
 
+        expect(attendees.length).to.equal(0);
 
+        await event.joinEvent(1);
+        
+        attendees = await event.getAttendees(1);
+        expect(attendees.length).to.equal(1);
+
+        // await event.joinEvent(1);
+        // attendees = await event.getAttendees(1);
+        // expect(attendees.length).to.equal(1);
 
     });
 
