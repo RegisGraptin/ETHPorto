@@ -18,6 +18,7 @@ contract EventContract {
 
     mapping(uint => Event) eventsMapping;
     mapping(uint => address[]) eventAttendeesMapping;
+    mapping(address => uint[]) participatedEventMapping;
 
     function createEvent(
         string calldata name, 
@@ -50,16 +51,26 @@ contract EventContract {
         return eventsMapping[eventid];
     }
 
-    function join(uint eventid, address participant) public {
+    function joinEvent(uint eventid) public {
         // Check that the event is valid
         require(eventid < event_id);
-        eventAttendeesMapping[eventid].push(participant);
-        emit NewAttendee(eventid, participant);
+
+        // TODO :: Check condition (date, event registration open...)
+
+        eventAttendeesMapping[eventid].push(msg.sender);
+        participatedEventMapping[msg.sender].push(eventid);
+
+        emit NewAttendee(eventid, msg.sender);
     }
 
     function getAttendees(uint eventid) public view returns(address[] memory) {
         // Get all the attendee from an event
         return eventAttendeesMapping[eventid];
+    }
+
+    // Get Events from user
+    function getParticipatingEvent() public view returns (uint[] memory) {
+        return participatedEventMapping[msg.sender];
     }
 
 }
