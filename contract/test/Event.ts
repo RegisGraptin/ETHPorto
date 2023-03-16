@@ -15,8 +15,12 @@ describe("Event", function() {
             "18/03/2023",
             "Porto"
         );
-        expect(await create_first_event_request).to.emit(event, "NewEvent")
+
+        let tx = await create_first_event_request;
+
+        expect(tx).to.emit(event, "NewEvent")
         expect(await event.event_id()).to.equal(1);
+        
 
         let create_second_event_request = event.createEvent(
             "ETHCC Paris", 
@@ -24,9 +28,14 @@ describe("Event", function() {
             "20/07/2023",
             "Paris"
         );
-        expect(await create_second_event_request).to.emit(event, "NewEvent")
+        
+        tx = await create_second_event_request; 
+
+        expect(tx).to.emit(event, "NewEvent")
         expect(await event.event_id()).to.equal(2);
         
+        
+
     });
 
 })

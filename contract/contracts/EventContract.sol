@@ -4,6 +4,7 @@ pragma solidity ^0.8.9;
 contract EventContract {
 
     event NewEvent(Event created_event);
+    event NewAttendee(uint evendid, address attendee);
 
     uint public event_id = 0;
 
@@ -16,9 +17,13 @@ contract EventContract {
     }
 
     mapping(uint => Event) eventsMapping;
+    mapping(uint => address[]) eventAttendeesMapping;
 
-    function createEvent(string calldata name, string calldata starting_date, 
-        string calldata ending_date, string calldata location) public returns (uint) {
+    function createEvent(
+        string calldata name, 
+        string calldata starting_date, 
+        string calldata ending_date, 
+        string calldata location) public returns (uint eventid) {
 
         // Increase the unique id 
         event_id += 1;
@@ -41,6 +46,20 @@ contract EventContract {
         return event_id;
     }
 
-    // Get the event lists 
+    function getEvent(uint eventid) public view returns (Event memory) {
+        return eventsMapping[eventid];
+    }
+
+    function join(uint eventid, address participant) public {
+        // Check that the event is valid
+        require(eventid < event_id);
+        eventAttendeesMapping[eventid].push(participant);
+        emit NewAttendee(eventid, participant);
+    }
+
+    function getAttendees(uint eventid) public view returns(address[] memory) {
+        // Get all the attendee from an event
+        return eventAttendeesMapping[eventid];
+    }
 
 }
