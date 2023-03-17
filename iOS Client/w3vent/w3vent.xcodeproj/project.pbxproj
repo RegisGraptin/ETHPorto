@@ -32,6 +32,7 @@
 		5CA5040029C481F9007460F8 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA503FF29C481F9007460F8 /* NibLoadable.swift */; };
 		5CAEC66A29C473D10089FCDF /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAEC66929C473D10089FCDF /* UserProfile.swift */; };
 		5CAEC66C29C473E20089FCDF /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAEC66B29C473E20089FCDF /* Parser.swift */; };
+		5CB2D51029C4DEA200C8F169 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB2D50F29C4DEA200C8F169 /* EventViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +62,7 @@
 		5CA503FF29C481F9007460F8 /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
 		5CAEC66929C473D10089FCDF /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		5CAEC66B29C473E20089FCDF /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		5CB2D50F29C4DEA200C8F169 /* EventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +133,7 @@
 				3E710DA02854C76000283621 /* MainViewController.swift */,
 				3E710D992854C68900283621 /* DetailViewController.swift */,
 				5C77A28D29C4665B00B80FB6 /* DashboardViewController.swift */,
+				5CB2D50F29C4DEA200C8F169 /* EventViewController.swift */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -251,6 +254,7 @@
 			files = (
 				3E710DA12854C76000283621 /* MainViewController.swift in Sources */,
 				5C77A28E29C4665B00B80FB6 /* DashboardViewController.swift in Sources */,
+				5CB2D51029C4DEA200C8F169 /* EventViewController.swift in Sources */,
 				5CA503FE29C48137007460F8 /* BaseViewController.swift in Sources */,
 				5CAEC66C29C473E20089FCDF /* Parser.swift in Sources */,
 				3E710D842854C5ED00283621 /* AppDelegate.swift in Sources */,
