@@ -329,14 +329,25 @@ all-in-one event app</string>
                     <view key="view" contentMode="scaleToFill" id="jFE-i6-Zcb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EventTicket" translatesAutoresizingMaskIntoConstraints="NO" id="P82-f3-fst">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="1iq-GN-lwu"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="P82-f3-fst" firstAttribute="bottom" secondItem="1iq-GN-lwu" secondAttribute="bottom" id="85R-5P-KsJ"/>
+                            <constraint firstItem="P82-f3-fst" firstAttribute="top" secondItem="jFE-i6-Zcb" secondAttribute="top" id="K7m-9C-ARi"/>
+                            <constraint firstItem="P82-f3-fst" firstAttribute="trailing" secondItem="1iq-GN-lwu" secondAttribute="trailing" id="ZOJ-eV-MRl"/>
+                            <constraint firstItem="P82-f3-fst" firstAttribute="leading" secondItem="1iq-GN-lwu" secondAttribute="leading" id="kZg-D2-vLf"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="TicketIcon" id="Jg8-8i-CdK"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vqb-Jx-hvg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1454" y="940"/>
+            <point key="canvasLocation" x="1453.6231884057972" y="939.50892857142856"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="6MJ-km-A2T">
@@ -1064,8 +1075,9 @@ all-in-one event app</string>
         <image name="ETH porto details" width="1256" height="2288"/>
         <image name="ETHPorto" width="988" height="612"/>
         <image name="ETHRio" width="988" height="612"/>
+        <image name="EventTicket" width="1256" height="2360"/>
         <image name="HomeIcon" width="25" height="25"/>
-        <image name="MyProfile" width="1256" height="2356"/>
+        <image name="MyProfile" width="1256" height="2352"/>
         <image name="NFC" width="988" height="724"/>
         <image name="PBWS" width="988" height="724"/>
         <image name="TicketIcon" width="25" height="25"/>
