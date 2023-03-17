@@ -379,7 +379,7 @@
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Solana" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SSA-hS-t5S">
                                                                 <rect key="frame" x="25" y="5" width="86.5" height="33.5"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                                                 <color key="textColor" systemColor="systemGray2Color"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
@@ -444,6 +444,12 @@
                                     <constraint firstItem="ZrJ-VF-Q6d" firstAttribute="leading" secondItem="T7W-4p-uv9" secondAttribute="leading" id="rCj-8n-ECy"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hackathons" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6B4-oN-SZ3">
+                                <rect key="frame" x="20" y="247" width="91.5" height="20"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="x9N-AS-v5i"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -455,10 +461,12 @@
                             <constraint firstItem="TGQ-fa-ESy" firstAttribute="top" secondItem="C5s-6l-aKg" secondAttribute="bottom" constant="18" id="TeR-RV-L3e"/>
                             <constraint firstAttribute="bottom" secondItem="Db4-lZ-RiM" secondAttribute="bottom" id="VWu-ui-Icf"/>
                             <constraint firstItem="Db4-lZ-RiM" firstAttribute="top" secondItem="LU4-6j-9SJ" secondAttribute="top" id="WgK-Dv-JAU"/>
+                            <constraint firstItem="6B4-oN-SZ3" firstAttribute="leading" secondItem="TGQ-fa-ESy" secondAttribute="leading" id="aWd-26-g8B"/>
                             <constraint firstItem="T7W-4p-uv9" firstAttribute="leading" secondItem="x9N-AS-v5i" secondAttribute="leading" id="cll-r7-BS5"/>
                             <constraint firstItem="T7W-4p-uv9" firstAttribute="top" secondItem="TGQ-fa-ESy" secondAttribute="bottom" constant="15" id="diE-wt-Ozc"/>
                             <constraint firstItem="C5s-6l-aKg" firstAttribute="top" secondItem="x9N-AS-v5i" secondAttribute="top" constant="20" id="gcs-2I-aba"/>
                             <constraint firstItem="TGQ-fa-ESy" firstAttribute="trailing" secondItem="C5s-6l-aKg" secondAttribute="trailing" id="lXb-Tf-PVc"/>
+                            <constraint firstItem="6B4-oN-SZ3" firstAttribute="top" secondItem="T7W-4p-uv9" secondAttribute="bottom" constant="10" id="laH-bN-9Ck"/>
                             <constraint firstItem="TGQ-fa-ESy" firstAttribute="leading" secondItem="x9N-AS-v5i" secondAttribute="leading" constant="20" id="qSS-9o-dD1"/>
                         </constraints>
                     </view>
