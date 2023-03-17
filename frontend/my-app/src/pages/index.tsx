@@ -45,7 +45,15 @@ export default function Home() {
           
          
          
-         <Checkbox
+        <Checkbox
+            checked
+            className="checkbox"
+            label="Option 1"
+            onChange={function noRefCheck(){}}
+            value="option_1"
+          />
+
+        <Checkbox
             checked
             className="checkbox"
             label="Option 1"
