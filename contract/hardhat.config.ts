@@ -6,9 +6,13 @@ require('dotenv').config({ path: '.env' });
 const config: HardhatUserConfig = {
   solidity: "0.8.18",
   networks: {
-    goerli: {
+    "goerli": {
       url: "https://goerli.nodeguardians.io",
       accounts: [process.env.PRIVATE_KEY],
+    }, 
+    "mantle-testnet": {
+      url: "https://rpc.testnet.mantle.xyz/",
+      accounts: [process.env.PRIVATE_KEY]
     }
   }
 };
