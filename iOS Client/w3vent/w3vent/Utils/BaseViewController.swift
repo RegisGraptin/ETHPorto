@@ -41,9 +41,17 @@ extension UIAlertController {
     }
 
     static func showFailedToConnect(from controller: UIViewController) {
-        let alert = UIAlertController(title: "Failed to connect", message: nil, preferredStyle: .alert)
-        controller.present(alert.withCloseButton(), animated: true)
+        let alert = UIAlertController(title: "Connecting to metamask", message: nil, preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: "Close", style: .cancel) {
+            UIAlertAction in
+            if let loginController = controller as? MainViewController {
+                loginController.gotoDashboard()
+            }
+        }
+        alert.addAction(cancelAction)
+        controller.present(alert, animated: true)
     }
+
 
     static func showDisconnected(from controller: UIViewController) {
         let alert = UIAlertController(title: "Did disconnect", message: nil, preferredStyle: .alert)
