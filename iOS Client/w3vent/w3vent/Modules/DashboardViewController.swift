@@ -8,3 +8,10 @@
 import Foundation
 import UIKit
 
+class DashboardViewController: BaseViewController  {
+    
+    
+    
+    
+    
+}

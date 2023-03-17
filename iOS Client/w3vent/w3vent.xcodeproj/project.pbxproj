@@ -15,10 +15,23 @@
 		3E710D9A2854C68900283621 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E710D992854C68900283621 /* DetailViewController.swift */; };
 		3E710D9F2854C72F00283621 /* WalletConnect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E710D9E2854C72F00283621 /* WalletConnect.swift */; };
 		3E710DA12854C76000283621 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E710DA02854C76000283621 /* MainViewController.swift */; };
+		5C0094AB29C47C860010B261 /* Inter-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5C0094A229C47C850010B261 /* Inter-ExtraLight.ttf */; };
+		5C0094AC29C47C860010B261 /* Inter-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5C0094A329C47C850010B261 /* Inter-Black.ttf */; };
+		5C0094AD29C47C860010B261 /* Inter-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5C0094A429C47C850010B261 /* Inter-Light.ttf */; };
+		5C0094AE29C47C860010B261 /* Inter-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5C0094A529C47C850010B261 /* Inter-Medium.ttf */; };
+		5C0094AF29C47C860010B261 /* Inter-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5C0094A629C47C850010B261 /* Inter-ExtraBold.ttf */; };
+		5C0094B029C47C860010B261 /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5C0094A729C47C860010B261 /* Inter-SemiBold.ttf */; };
+		5C0094B129C47C860010B261 /* Inter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5C0094A829C47C860010B261 /* Inter-Regular.ttf */; };
+		5C0094B229C47C860010B261 /* Inter-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5C0094A929C47C860010B261 /* Inter-Bold.ttf */; };
+		5C0094B329C47C860010B261 /* Inter-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5C0094AA29C47C860010B261 /* Inter-Thin.ttf */; };
 		5C77A28E29C4665B00B80FB6 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C77A28D29C4665B00B80FB6 /* DashboardViewController.swift */; };
 		5C77A29129C4672000B80FB6 /* ContentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C77A29029C4672000B80FB6 /* ContentManager.swift */; };
 		5C77A29329C4679500B80FB6 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C77A29229C4679500B80FB6 /* NetworkManager.swift */; };
 		5C78F4E629C3CEB50083FD0F /* WalletConnectSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5C78F4E529C3CEB50083FD0F /* WalletConnectSwift */; };
+		5CA503FE29C48137007460F8 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA503FD29C48137007460F8 /* BaseViewController.swift */; };
+		5CA5040029C481F9007460F8 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA503FF29C481F9007460F8 /* NibLoadable.swift */; };
+		5CAEC66A29C473D10089FCDF /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAEC66929C473D10089FCDF /* UserProfile.swift */; };
+		5CAEC66C29C473E20089FCDF /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAEC66B29C473E20089FCDF /* Parser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,9 +45,22 @@
 		3E710D992854C68900283621 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		3E710D9E2854C72F00283621 /* WalletConnect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalletConnect.swift; sourceTree = "<group>"; };
 		3E710DA02854C76000283621 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		5C0094A229C47C850010B261 /* Inter-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-ExtraLight.ttf"; sourceTree = "<group>"; };
+		5C0094A329C47C850010B261 /* Inter-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Black.ttf"; sourceTree = "<group>"; };
+		5C0094A429C47C850010B261 /* Inter-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Light.ttf"; sourceTree = "<group>"; };
+		5C0094A529C47C850010B261 /* Inter-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Medium.ttf"; sourceTree = "<group>"; };
+		5C0094A629C47C850010B261 /* Inter-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-ExtraBold.ttf"; sourceTree = "<group>"; };
+		5C0094A729C47C860010B261 /* Inter-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-SemiBold.ttf"; sourceTree = "<group>"; };
+		5C0094A829C47C860010B261 /* Inter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Regular.ttf"; sourceTree = "<group>"; };
+		5C0094A929C47C860010B261 /* Inter-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Bold.ttf"; sourceTree = "<group>"; };
+		5C0094AA29C47C860010B261 /* Inter-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Thin.ttf"; sourceTree = "<group>"; };
 		5C77A28D29C4665B00B80FB6 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		5C77A29029C4672000B80FB6 /* ContentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentManager.swift; sourceTree = "<group>"; };
 		5C77A29229C4679500B80FB6 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		5CA503FD29C48137007460F8 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		5CA503FF29C481F9007460F8 /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
+		5CAEC66929C473D10089FCDF /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		5CAEC66B29C473E20089FCDF /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +94,9 @@
 		3E710D822854C5ED00283621 /* w3vent */ = {
 			isa = PBXGroup;
 			children = (
+				5CA503FC29C4811A007460F8 /* Utils */,
+				5C0094B429C47C8C0010B261 /* Assets */,
+				5CAEC66829C473C00089FCDF /* Model */,
 				5C77A28F29C466EC00B80FB6 /* Network */,
 				5C77A28C29C4663C00B80FB6 /* Modules */,
 				3E710D832854C5ED00283621 /* AppDelegate.swift */,
@@ -77,6 +106,22 @@
 				3E710D912854C5ED00283621 /* Info.plist */,
 			);
 			path = w3vent;
+			sourceTree = "<group>";
+		};
+		5C0094B429C47C8C0010B261 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				5C0094A329C47C850010B261 /* Inter-Black.ttf */,
+				5C0094A929C47C860010B261 /* Inter-Bold.ttf */,
+				5C0094A629C47C850010B261 /* Inter-ExtraBold.ttf */,
+				5C0094A229C47C850010B261 /* Inter-ExtraLight.ttf */,
+				5C0094A429C47C850010B261 /* Inter-Light.ttf */,
+				5C0094A529C47C850010B261 /* Inter-Medium.ttf */,
+				5C0094A829C47C860010B261 /* Inter-Regular.ttf */,
+				5C0094A729C47C860010B261 /* Inter-SemiBold.ttf */,
+				5C0094AA29C47C860010B261 /* Inter-Thin.ttf */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 		5C77A28C29C4663C00B80FB6 /* Modules */ = {
@@ -98,6 +143,24 @@
 				5C77A29229C4679500B80FB6 /* NetworkManager.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		5CA503FC29C4811A007460F8 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				5CA503FD29C48137007460F8 /* BaseViewController.swift */,
+				5CA503FF29C481F9007460F8 /* NibLoadable.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		5CAEC66829C473C00089FCDF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5CAEC66929C473D10089FCDF /* UserProfile.swift */,
+				5CAEC66B29C473E20089FCDF /* Parser.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,7 +229,16 @@
 			files = (
 				3E710D902854C5ED00283621 /* LaunchScreen.storyboard in Resources */,
 				3E710D8D2854C5ED00283621 /* Assets.xcassets in Resources */,
+				5C0094B229C47C860010B261 /* Inter-Bold.ttf in Resources */,
+				5C0094AC29C47C860010B261 /* Inter-Black.ttf in Resources */,
+				5C0094B029C47C860010B261 /* Inter-SemiBold.ttf in Resources */,
+				5C0094AF29C47C860010B261 /* Inter-ExtraBold.ttf in Resources */,
 				3E710D8B2854C5ED00283621 /* Main.storyboard in Resources */,
+				5C0094B129C47C860010B261 /* Inter-Regular.ttf in Resources */,
+				5C0094B329C47C860010B261 /* Inter-Thin.ttf in Resources */,
+				5C0094AE29C47C860010B261 /* Inter-Medium.ttf in Resources */,
+				5C0094AD29C47C860010B261 /* Inter-Light.ttf in Resources */,
+				5C0094AB29C47C860010B261 /* Inter-ExtraLight.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,12 +251,16 @@
 			files = (
 				3E710DA12854C76000283621 /* MainViewController.swift in Sources */,
 				5C77A28E29C4665B00B80FB6 /* DashboardViewController.swift in Sources */,
+				5CA503FE29C48137007460F8 /* BaseViewController.swift in Sources */,
+				5CAEC66C29C473E20089FCDF /* Parser.swift in Sources */,
 				3E710D842854C5ED00283621 /* AppDelegate.swift in Sources */,
 				3E710D9A2854C68900283621 /* DetailViewController.swift in Sources */,
 				5C77A29329C4679500B80FB6 /* NetworkManager.swift in Sources */,
 				3E710D982854C64B00283621 /* HandshakeViewController.swift in Sources */,
 				3E710D9F2854C72F00283621 /* WalletConnect.swift in Sources */,
+				5CA5040029C481F9007460F8 /* NibLoadable.swift in Sources */,
 				5C77A29129C4672000B80FB6 /* ContentManager.swift in Sources */,
+				5CAEC66A29C473D10089FCDF /* UserProfile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

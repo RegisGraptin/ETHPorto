@@ -17,38 +17,38 @@ class NetworkManager {
         URL(string: "https://ev3nt-api.herokuapp.com/getProfile/" + address)!
     }
         
-//    static func getUserProfile(address: String, completionHandler: @escaping ((_ result: UserProfile?, _ error: NSError?) -> Void)) {
-//
-//        NetworkManager.fetchData(fromURL: NetworkManager.getProfileUrl(address: address)) { result in
-//            switch result {
-//            case .success(let data):
-//                if let profile = Parser.parseProfile(jsonData: data) {
-//                    completionHandler(profile, nil)
-//                } else {
-//                    print("Parse error")
-//                    completionHandler(nil, NSError())
-//                }
-//
-//            case .failure(let error):
-//                print(error)
-//                completionHandler(nil, error as NSError)
-//            }
-//        }
-//    }
-//
-//    static func fetchParticipants(completionHandler: @escaping ((_ result: [UserProfile]?, _ error: NSError?) -> Void)) {
-//
-//        NetworkManager.fetchData(fromURL: NetworkManager.getEventsUrl()) { result in
-//            switch result {
-//            case .success(let data):
-//                let attendees = Parser.parseAttendees(jsonData: data)
-//                completionHandler(attendees,nil)
-//            case .failure(let error):
-//                print(error)
-//                completionHandler(nil, error as NSError)
-//            }
-//        }
-//    }
+    static func getUserProfile(address: String, completionHandler: @escaping ((_ result: UserProfile?, _ error: NSError?) -> Void)) {
+
+        NetworkManager.fetchData(fromURL: NetworkManager.getProfileUrl(address: address)) { result in
+            switch result {
+            case .success(let data):
+                if let profile = Parser.parseProfile(jsonData: data) {
+                    completionHandler(profile, nil)
+                } else {
+                    print("Parse error")
+                    completionHandler(nil, NSError())
+                }
+
+            case .failure(let error):
+                print(error)
+                completionHandler(nil, error as NSError)
+            }
+        }
+    }
+
+    static func fetchParticipants(completionHandler: @escaping ((_ result: [UserProfile]?, _ error: NSError?) -> Void)) {
+
+        NetworkManager.fetchData(fromURL: NetworkManager.getEventsUrl()) { result in
+            switch result {
+            case .success(let data):
+                let attendees = Parser.parseAttendees(jsonData: data)
+                completionHandler(attendees,nil)
+            case .failure(let error):
+                print(error)
+                completionHandler(nil, error as NSError)
+            }
+        }
+    }
     
 }
 
