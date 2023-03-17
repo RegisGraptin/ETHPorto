@@ -10,10 +10,9 @@ import UIKit
 
 class EventViewController: BaseViewController  {
     
-    var backgroundImageCounter: Int = 0
-    
     @IBOutlet weak var backgroundImageView: UIImageView!
     
+    var backgroundImageCounter: Int = 0
     
     @IBAction func EventButtonDidPress(_ sender: Any) {
         if backgroundImageCounter % 2 == 0 {
