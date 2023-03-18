@@ -42,7 +42,7 @@ extension UIAlertController {
 
     static func showFailedToConnect(from controller: UIViewController) {
         let alert = UIAlertController(title: "Connecting to metamask", message: nil, preferredStyle: .alert)
-        let cancelAction = UIAlertAction(title: "Close", style: .cancel) {
+        let cancelAction = UIAlertAction(title: "Continue", style: .cancel) {
             UIAlertAction in
             if let loginController = controller as? MainViewController {
                 loginController.gotoDashboard()

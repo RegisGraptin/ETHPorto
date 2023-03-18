@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
-import { TextField, Button, Icon, Tag, ButtonDropdown, TextArea, GridContainer, GridCol, GridRow } from '@taikai/rocket-kit'
+import { TextField, Button, Icon, Tag, ButtonDropdown, TextArea, GridContainer, GridCol, GridRow, SelectInteractive } from '@taikai/rocket-kit'
 import { useState } from 'react'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -162,7 +162,7 @@ export default function Event() {
                                 <TextField
                                     name="location"
                                     onChange={(e) => setLocation(e.target.value)}
-                                    placeholder="Localisation"
+                                    placeholder="Localization"
                                     type="text" />
                             </GridCol>
                         </GridRow>
@@ -198,14 +198,54 @@ export default function Event() {
                             </GridCol>
                             <GridCol>
 
-                                <Tag
-                                    // onChange={(e) => setTags(e.target.value)}
-                                    color="purple500"
-                                    txtColor="white"
-                                    value="Burgdoggen"
-                                    variant="solid" />
+                            
+                            <SelectInteractive class={styles.SelectInteractive}
+                            multi
+                            onChange={function noRefCheck(){}}
+                            options={[
+                            {
+                                label: 'Tech',
+                                options: [
+                            {
+                                isDisabled: true,
+                                label: 'Blockchain',
+                                value: 'Blockchain'
+                            },
+                            {
+                                label: 'Meetup',
+                                value: 'Meetup'
+                            },
+                            {
+                                label: 'Hackathon',
+                                value: 'Hackathon'
+                            }
+                        ]
+                    },
+                    {
+                        label: 'Entertainment',
+                        options: [
+                    {
+                        label: 'Music Concert',
+                        value: 'Music Concert'
+                    },
+                    {
+                        label: 'Exhibition',
+                        value: 'Exhibition'
+                    }
+                    {
+                        label: 'Workshop',
+                        value: 'Workshop'
+                    }
+                ]
+            }
+        ]}
+            value={{
+            label: 'Meetup',
+            value: 'Meetup'
+        }}
+    />
 
-                            </GridCol>
+                        </GridCol>
                         </GridRow>
 
 
@@ -222,34 +262,17 @@ export default function Event() {
 
                     </GridContainer>
 
-
-
-                    <ButtonDropdown
-                        actions={[
-                            {
-                                action: createNewEvent,
-                                id: 'createChallenge',
-                                url: null,
-                                value: 'Hackathon'
-                            },
-                            {
-                                action: function noRefCheck() { },
-                                id: 'createHiringChallenge',
-                                url: null,
-                                value: 'Hiring Challenge'
-                            }
-                        ]}
-                        ariaLabel="Create new challenge"
-                        className="button-dropdown"
-                        color="purple500"
-                        icon="add"
-                        txtColor="white"
-                        value="Create"
-                        variant="solid"
+                    <Button
+                    ariaLabel="Dummie Button"
+                    className="button"
+                    color="purple500"
+                    icon=""
+                    iconPosition="right"
+                    txtColor="white"
+                    value="Submit"
+                    variant="solid"
+                    onclick="createNewEvent"
                     />
-
-
-
                 </div>
             </main>
 
