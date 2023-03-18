@@ -32,7 +32,7 @@
   <img src="./mobile.jpg" alt="Mobile App">
 </p>
 
-Greenroom is an iOS app that makes tech event participation seamless by leveraging web3 identity primitives to maximise both the event creator and participant experiences before, during and after the event; event creation, vibe-check, leveraging/building on-chain reputation, seamless on-boarding and ticketing, automated payouts and smart-networking.
+Greenroom is a plateform that makes tech event participation seamless by leveraging web3 identity primitives to maximise both the event creator and participant experiences before, during and after the event; event creation, vibe-check, leveraging/building on-chain reputation, seamless on-boarding and ticketing, automated payouts and smart-networking.
 
 Currently application experience for tech events, primarily hackathons is a bit all over the place. Applications are non-reusable (god forbid if you have to fill a Google form each time), tickets are sent by email, payments are processed via third party payment providers, networking is off-platform (Discord/Telegram) and managing them all is god's work
 
@@ -72,25 +72,21 @@ For the ticketing system, we decided to use the DappKit framework from LayerX. A
 
 ### Mobile App
 
-A mobile app have been designed for this purpose. The user can use a mobile application to have access to the current events, see the coming one. This app seek to leverage on-chain data, by gathering information on previous events that the person has done.
+A mobile app have been designed for this purpose. The user can use a mobile application to have access to the current events, see the coming one. This app seek to leverage on-chain data, by gathering information on previous events that the person has done. A match making system has been thinking but not implemented.
 
-A match making system has been thinking but not implemented.
+For the mobile application, it can be find in the `iOS Client` folder.
 
 
 ### Event Manager 
 
-In the `frontend` repository, you will find a React framework using Rocketkit for the UI component. We create this web app only for event creation as it will be useful for organizer to plan the event information.
-
-
+We create a web app for the events creation as it will be useful for organizer to plan and fill the event information.
+It can be found in the `frontend` repository, you will find a React framework using Rocketkit for the UI component. 
 
 
 ### Unstack system 
 
 
-We also imagine a system of stacking for the organizer of an event. This stacking system will force the creator to create an event, 
-
-To avoid any bad behavior and scam for creating a new events, we imagine a stacking system for the event. This stacking system will first allow the limitation on the creaton of event. This will also can incite people to participate in the event as fund are lock to be sure that the event will be there. 
-Other approaches have come to mind about the checking part. 
+We also imagine a system of stacking for the organizer of an event. This stacking system will force the creator to create an event, and to do it. This will avoid any bad behavior and scam for creating a fakes events. This stacking system will be a first barrier because you will need some cash to create event. This will also create confidence for the attendee as they know that the organizer put some money on the line for the event. After the event is passed, the money can be unstack. 
 
 We also implement a ChainLink Automation system with a Time-base trigger. Indeed, when the event is finished, we want to unlock the stacking token of the owner. As we want to this process to be smooth as possible for the user, we do not want them additionnal interaction with the blockchain. Then, we think that a external trigger to unlock the token could be an interesting functionnality.
 
