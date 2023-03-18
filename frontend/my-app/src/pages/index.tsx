@@ -23,6 +23,8 @@ export default function Home() {
       const account = accounts[0];
 
       console.log(account);
+
+      // TODO :: Do redirection
     }
   }
 
@@ -35,36 +37,34 @@ export default function Home() {
                 <link href="https://api.fontshare.com/v2/css?f[]=bespoke-stencil@701,800,2,501,300,801,700,500,301,401,400,1&f[]=plus-jakarta-sans@501,601,500,600,700,701&f[]=general-sans@701,500,601,600,501,400,700&display=swap" rel="stylesheet"></link>
             </Head>
             <nav id={styles.navbar}>
-                <header class="header">
+                <header className="header">
                     <ul>
                         <li>
-                            <a class="nav-link" href="/">Homepage</a>
+                            <a className="nav-link" href="/"></a>
                         </li>
                         <li>
-                            <a class="nav-link" href="createevent">Create Event</a>
+                            <a className="nav-link" href="createevent">Create Event</a>
                         </li>
                         <li>
-                            <a class="nav-link" href="#FAQ">FAQ</a>
+                            <a className="nav-link" href="#FAQ">FAQ</a>
                         </li>
                         <li>
-                            <a class="nav-link" href="#Support">Support</a>
+                            <a className="nav-link" href="#Support">Support</a>
                         </li>
                     </ul>
                 </header>
             </nav>
-            <main class={styles.main}>
+            <main className={styles.main}>
                 <h1>GreenRoom</h1>
-                <div class={styles.description}>
+                <div className={styles.description}>
                     <h3>For Event Organizers!</h3>
-                </div>
-                <div class={styles.main}>
-                <button onClick={loginWithMetamask}>
-                  Click Me
-                </button>
-                
+
+                    <button onClick={loginWithMetamask}>
+                      Click Me
+                    </button>
                 </div>
             </main>
-            <footer class={styles.footer}>
+            <footer className={styles.footer}>
                     <p>@GreenRoom, 2023 | ETHPorto</p>
             </footer>
         </>
