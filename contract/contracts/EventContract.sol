@@ -39,8 +39,8 @@ contract EventContract is AutomationCompatibleInterface{
         // TODO :: Price for the creation 
         // TODO :: Staking system (future version)
 
-        // bool sent = payable(address(this)).transfer(msg.value);
-        // require(sent, "Failed to send Ether");
+        (bool success, ) = payable(address(this)).call{value: msg.value}("");
+        require(success, "Failed to send Ether");
 
         // Create an event
         Event memory currentEvent = Event(starting_date, ending_date, msg.value, creator, name, metadata);
