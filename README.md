@@ -28,7 +28,9 @@
 ## About The Project
 
 <!-- mobile -->
-![Mobile App](./mobile.jpg)
+<p align="center">
+  <img src="./mobile.jpg" alt="Mobile App">
+</p>
 
 Greenroom is an iOS app that makes tech event participation seamless by leveraging web3 identity primitives to maximise both the event creator and participant experiences before, during and after the event; event creation, vibe-check, leveraging/building on-chain reputation, seamless on-boarding and ticketing, automated payouts and smart-networking.
 
