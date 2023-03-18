@@ -2,12 +2,31 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
-import { Checkbox } from '@taikai/rocket-kit'
 
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+
+
+  const loginWithMetamask = async () => {
+    console.log('loginWithMetamask');
+    
+    // Check if metamask is installed
+    if (typeof window.ethereum !== 'undefined') {
+      console.log('MetaMask is installed!');
+  
+      // Get the metamask account
+      const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
+
+      // Get the user account
+      const account = accounts[0];
+
+      console.log(account);
+    }
+  }
+
+
   return (
     <>
       <Head>
@@ -23,12 +42,8 @@ export default function Home() {
             <code className={styles.code}>src/pages/index.tsx</code>
           </p>
           <div>
-            <a
-              href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              By{' '}
+            
+              
               <Image
                 src="/vercel.svg"
                 alt="Vercel Logo"
@@ -37,30 +52,17 @@ export default function Home() {
                 height={24}
                 priority
               />
-            </a>
+
+
+            <button onClick={loginWithMetamask}>
+              Click Me
+            </button>
+            
           </div>
         </div>
 
         <div className={styles.center}>
           
-         
-         
-        <Checkbox
-            checked
-            className="checkbox"
-            label="Option 1"
-            onChange={function noRefCheck(){}}
-            value="option_1"
-          />
-
-        <Checkbox
-            checked
-            className="checkbox"
-            label="Option 1"
-            onChange={function noRefCheck(){}}
-            value="option_1"
-          />
-
         </div>
 
         <div className={styles.grid}>
