@@ -23,6 +23,9 @@ Deploy on mantle
 npx hardhat run scripts/deploy.ts --network mantle
 ```
 
+npx hardhat run scripts/deploy.ts --network ganache
+
+
 Contract Address on Goerli
 
 0x83d619f27fC3C1eCeEC4f6F5f3DA5026e385dA51

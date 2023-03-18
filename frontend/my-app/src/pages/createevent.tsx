@@ -2,10 +2,14 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
-import { TextField, Button, Icon, Tag, ButtonDropdown, TextArea, GridContainer, GridCol, GridRow} from '@taikai/rocket-kit'
+import { TextField, Button, Icon, Tag, ButtonDropdown, TextArea, GridContainer, GridCol, GridRow } from '@taikai/rocket-kit'
 import { useState } from 'react'
 
 const inter = Inter({ subsets: ['latin'] })
+const Web3 = require("web3");
+
+
+import EventContractABI from '../contract/EventContract.json';
 
 export default function Event() {
 
@@ -16,7 +20,7 @@ export default function Event() {
     // Number of attendees
     // Tags
     // Description
-    
+
     const [name, setName] = useState("");
     const [location, setLocation] = useState("");
     const [startingDate, setstartingDate] = useState("");
@@ -26,33 +30,90 @@ export default function Event() {
     const [description, setDescription] = useState("");
 
 
-  const createNewEvent = async () => {
-    console.log('Create a new event');
-        
+    const createNewEvent = async () => {
+        console.log('Create a new event');
+
         // Get the metamask account
         const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
 
         // Get the user account
-        const account = accounts[0];
+        let account = accounts[0];
 
-        // Get the fields information
+        // Contract information
+        let contract_address = "0x10AfB7bd9FF9836FAb357f9f7F48211f7211F116";
 
-        console.log("Selected name: ");
-        console.log(name);
 
-        
-        // Sign a transaction 
+        let url = "http://127.0.0.1:7545";
 
+        var web3 = new Web3(new Web3.providers.HttpProvider(url));
+        const myContract = new web3.eth.Contract(
+            EventContractABI,
+            contract_address
+        );
+
+
+        // account = "0xF42E4b6d239A9098B7F21303F01CF1069fD5580E";
+
+        console.log(account);
+
+        let event_tx = await myContract.methods.createEvent(
+            100,
+            120,
+            "name",
+            "location",
+        ).send({from: account, gas: '1000000'})
+
+
+        // TODO :: Get the event id and check if it is good 
         // Check the result
 
         console.log(name);
         console.log(location);
+
+        let list_events = await getEventList();
+        console.log(list_events);
     }
-  
+
+
+    const getEventList = async () => {
+
+
+        // Contract information
+        let contract_address = "0x10AfB7bd9FF9836FAb357f9f7F48211f7211F116";
+
+        let url = "http://127.0.0.1:7545";
+
+        var web3 = new Web3(new Web3.providers.HttpProvider(url));
+        const myContract = new web3.eth.Contract(
+            EventContractABI,
+            contract_address
+        );
+
+
+        let list_events : any[] = [];
+
+        // If I only want the event id available
+        return await myContract.methods.event_id().call().then(
+            (res: any) => {
+                
+                for (let i = 1; i < res; i++) {
+                    myContract.methods.getEvent(i).call().then(
+                        (store_event: any) => {
+                            list_events.push(store_event)
+                        }
+                    )
+                }
+                
+                return list_events;
+            }
+        )
+        
+        
+    }
 
 
 
-    return(
+    return (
         <>
             <Head>
                 <title>GreenRoom</title>
@@ -81,114 +142,114 @@ export default function Event() {
             <main className={styles.main}>
                 <h1>Create a new event</h1>
                 <div className={styles.center}>
-                        
 
-                {/* Event form */}
-                <GridContainer>
-                    <GridRow>
-                        <GridCol>
-                            <TextField
-                                name="name"
-                                onChange={(e) => setName(e.target.value)}
-                                placeholder="Name of the event"
-                                type="text"/>
-                        </GridCol>
 
-                        <GridCol>
-                            <TextField
-                                name="location"
-                                onChange={(e) => setLocation(e.target.value)}
-                                placeholder="Localisation"
-                                type="text"/>
-                        </GridCol>
-                    </GridRow>
-                    
-                    <GridRow>
-                    
-                        <GridCol>
-                            <TextField
+                    {/* Event form */}
+                    <GridContainer>
+                        <GridRow>
+                            <GridCol>
+                                <TextField
+                                    name="name"
+                                    onChange={(e) => setName(e.target.value)}
+                                    placeholder="Name of the event"
+                                    type="text" />
+                            </GridCol>
+
+                            <GridCol>
+                                <TextField
+                                    name="location"
+                                    onChange={(e) => setLocation(e.target.value)}
+                                    placeholder="Localisation"
+                                    type="text" />
+                            </GridCol>
+                        </GridRow>
+
+                        <GridRow>
+
+                            <GridCol>
+                                <TextField
+                                    minimal
+                                    onChange={(e) => setstartingDate(e.target.value)}
+                                    name="starting-date"
+                                    type="date" />
+                            </GridCol>
+                            <GridCol>
+                                <TextField
+                                    minimal
+                                    onChange={(e) => setendingDate(e.target.value)}
+                                    name="ending-time"
+                                    type="date" />
+                            </GridCol>
+                        </GridRow>
+
+
+                        <GridRow>
+                            <GridCol>
+                                <TextField
+                                    onChange={(e) => setNbAttendees(e.target.value)}
+                                    max={10000}
+                                    min={1}
+                                    name="attendees"
+                                    placeholder="Number of attendees expected"
+                                    type="number" />
+                            </GridCol>
+                            <GridCol>
+
+                                <Tag
+                                    // onChange={(e) => setTags(e.target.value)}
+                                    color="purple500"
+                                    txtColor="white"
+                                    value="Burgdoggen"
+                                    variant="solid" />
+
+                            </GridCol>
+                        </GridRow>
+
+
+                        <GridRow>
+                            <TextArea
+                                onChange={(e) => setDescription(e.target.value)}
+                                error=""
+                                height="100px"
                                 minimal
-                                onChange={(e) => setstartingDate(e.target.value)}
-                                name="starting-date"
-                                type="date"/>
-                        </GridCol>
-                        <GridCol>
-                            <TextField
-                                minimal
-                                onChange={(e) => setendingDate(e.target.value)}
-                                name="ending-time"
-                                type="date"/>
-                        </GridCol>
-                    </GridRow>
+                                name="description"
+                                placeholder="Description" />
 
+                        </GridRow>
 
-                    <GridRow>
-                        <GridCol>
-                            <TextField
-                                onChange={(e) => setNbAttendees(e.target.value)}
-                                max={10000}
-                                min={1}
-                                name="attendees"
-                                placeholder="Number of attendees expected"
-                                type="number" />
-                        </GridCol>
-                        <GridCol>
-                            
-                            <Tag
-                                // onChange={(e) => setTags(e.target.value)}
-                                color="purple500"
-                                txtColor="white"
-                                value="Burgdoggen"
-                                variant="solid"/>
-
-                        </GridCol>
-                    </GridRow>
-
-
-                    <GridRow>
-                        <TextArea
-                            onChange={(e) => setDescription(e.target.value)}
-                            error=""
-                            height="100px"
-                            minimal
-                            name="description"
-                            placeholder="Description" /> 
-
-                    </GridRow>
-                    
-                </GridContainer>
+                    </GridContainer>
 
 
 
-                <ButtonDropdown
-                    actions={[
-                        {
-                            action: createNewEvent,
-                            id: 'createChallenge',
-                            url: null,
-                            value: 'Hackathon'
-                        },
-                        {
-                            action: function noRefCheck(){},
-                            id: 'createHiringChallenge',
-                            url: null,
-                            value: 'Hiring Challenge'
-                        }
-                    ]}
-                    ariaLabel="Create new challenge"
-                    className="button-dropdown"
-                    color="purple500"
-                    icon="add"
-                    txtColor="white"
-                    value="Create"
-                    variant="solid"
-                />
+                    <ButtonDropdown
+                        actions={[
+                            {
+                                action: createNewEvent,
+                                id: 'createChallenge',
+                                url: null,
+                                value: 'Hackathon'
+                            },
+                            {
+                                action: function noRefCheck() { },
+                                id: 'createHiringChallenge',
+                                url: null,
+                                value: 'Hiring Challenge'
+                            }
+                        ]}
+                        ariaLabel="Create new challenge"
+                        className="button-dropdown"
+                        color="purple500"
+                        icon="add"
+                        txtColor="white"
+                        value="Create"
+                        variant="solid"
+                    />
 
-   
+
 
                 </div>
             </main>
-            
+
         </>
     )
 }
