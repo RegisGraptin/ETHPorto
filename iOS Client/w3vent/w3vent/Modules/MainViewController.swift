@@ -14,7 +14,6 @@ class MainViewController: UIViewController {
 
     @IBAction func connect(_ sender: Any) {
         
-        return //remove
         let connectionUrl = walletConnect.connect()
 
         /// https://docs.walletconnect.org/mobile-linking#for-ios

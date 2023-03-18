@@ -42,7 +42,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="19"/>
                                 <state key="normal" title="Login with WalletConnect">
-                                    <color key="titleColor" systemColor="labelColor"/>
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -51,7 +51,6 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="connect:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nse-5g-u6P"/>
-                                    <segue destination="rih-UO-5jJ" kind="show" identifier="dashboard" id="SZC-xm-2cM"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="greenroom" translatesAutoresizingMaskIntoConstraints="NO" id="Shw-aQ-mKq">
@@ -224,6 +223,9 @@ all-in-one event app</string>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="IWx-TZ-mfR"/>
+                    <connections>
+                        <segue destination="rih-UO-5jJ" kind="show" identifier="dashboard" id="Ks5-TY-T4N"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -327,7 +329,7 @@ all-in-one event app</string>
             <objects>
                 <viewController id="uCB-oA-aBS" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jFE-i6-Zcb">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EventTicket" translatesAutoresizingMaskIntoConstraints="NO" id="P82-f3-fst">
@@ -354,18 +356,18 @@ all-in-one event app</string>
             <objects>
                 <viewController id="py7-ID-PRd" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MyI-BE-Cgq">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MyProfile" translatesAutoresizingMaskIntoConstraints="NO" id="Owg-Xo-clw">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="781"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MyProfile" translatesAutoresizingMaskIntoConstraints="NO" id="Owg-Xo-clw">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="803"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="s6d-yD-ngk"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Owg-Xo-clw" firstAttribute="top" secondItem="MyI-BE-Cgq" secondAttribute="top" id="2LM-0b-SCr"/>
-                            <constraint firstAttribute="bottom" secondItem="Owg-Xo-clw" secondAttribute="bottom" constant="115" id="6gp-ba-qPH"/>
+                            <constraint firstAttribute="bottom" secondItem="Owg-Xo-clw" secondAttribute="bottom" constant="10" id="6gp-ba-qPH"/>
                             <constraint firstItem="Owg-Xo-clw" firstAttribute="trailing" secondItem="s6d-yD-ngk" secondAttribute="trailing" id="CHb-Bd-bBr"/>
                             <constraint firstItem="Owg-Xo-clw" firstAttribute="leading" secondItem="s6d-yD-ngk" secondAttribute="leading" id="huR-BH-V8f"/>
                         </constraints>
@@ -381,16 +383,16 @@ all-in-one event app</string>
             <objects>
                 <viewController id="aZs-z9-x4v" customClass="DashboardViewController" customModule="Greenroom" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LU4-6j-9SJ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="Db4-lZ-RiM">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C5s-6l-aKg">
                                 <rect key="frame" x="297.5" y="53" width="101.5" height="36"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0x...9029" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BA8-Pg-yXO">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0x...94e2" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BA8-Pg-yXO">
                                         <rect key="frame" x="15" y="5" width="71.5" height="26"/>
                                         <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="16"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -412,7 +414,7 @@ all-in-one event app</string>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <searchBar contentMode="redraw" searchBarStyle="minimal" text="Search" placeholder="Search" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TGQ-fa-ESy">
-                                <rect key="frame" x="20" y="99" width="379" height="56"/>
+                                <rect key="frame" x="20" y="94" width="379" height="56"/>
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
@@ -425,7 +427,7 @@ all-in-one event app</string>
                                 </connections>
                             </searchBar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T7W-4p-uv9">
-                                <rect key="frame" x="0.0" y="165" width="414" height="40"/>
+                                <rect key="frame" x="0.0" y="160" width="414" height="40"/>
                                 <subviews>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZrJ-VF-Q6d">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="40"/>
@@ -648,7 +650,7 @@ all-in-one event app</string>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kMf-a2-Wtr">
-                                <rect key="frame" x="0.0" y="264.5" width="414" height="200"/>
+                                <rect key="frame" x="0.0" y="254.5" width="414" height="200"/>
                                 <subviews>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eum-No-QSF">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
@@ -784,47 +786,47 @@ all-in-one event app</string>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hackathons" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6B4-oN-SZ3">
-                                <rect key="frame" x="25" y="220" width="142" height="29.5"/>
+                                <rect key="frame" x="25" y="215" width="142" height="29.5"/>
                                 <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="24"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recommended for you" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xjg-9e-ubZ">
-                                <rect key="frame" x="25" y="479.5" width="286.5" height="31.5"/>
+                                <rect key="frame" x="25" y="469.5" width="286.5" height="31.5"/>
                                 <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="26"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="See all" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qNb-3c-UKh">
-                                <rect key="frame" x="349" y="226" width="50" height="19.5"/>
+                                <rect key="frame" x="349" y="221" width="50" height="19.5"/>
                                 <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="16"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wik-c9-Lgi">
-                                <rect key="frame" x="0.0" y="526" width="414" height="230"/>
+                                <rect key="frame" x="0.0" y="516" width="414" height="200"/>
                                 <subviews>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ip-Rq-d4u">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="230"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="BFX-hX-BQF">
-                                                <rect key="frame" x="0.0" y="0.0" width="670" height="226.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="590" height="197"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zWy-pe-kWX">
-                                                        <rect key="frame" x="0.0" y="0.0" width="20" height="226.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="20" height="197"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="20" id="GjP-tR-Lkp"/>
                                                         </constraints>
                                                     </view>
                                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yOO-nn-btQ">
-                                                        <rect key="frame" x="30" y="0.0" width="300" height="226.5"/>
+                                                        <rect key="frame" x="30" y="0.0" width="260" height="197"/>
                                                         <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NFC" translatesAutoresizingMaskIntoConstraints="NO" id="qpX-cg-Y3C">
-                                                                <rect key="frame" x="0.0" y="0.0" width="300" height="226.5"/>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NFC" translatesAutoresizingMaskIntoConstraints="NO" id="qpX-cg-Y3C">
+                                                                <rect key="frame" x="0.0" y="0.0" width="260" height="197"/>
                                                             </imageView>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4U6-JB-Tba">
-                                                                <rect key="frame" x="0.0" y="0.0" width="300" height="226.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="260" height="197"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain"/>
@@ -838,7 +840,7 @@ all-in-one event app</string>
                                                             <constraint firstItem="qpX-cg-Y3C" firstAttribute="leading" secondItem="yOO-nn-btQ" secondAttribute="leading" id="aOC-Se-ib6"/>
                                                             <constraint firstAttribute="trailing" secondItem="qpX-cg-Y3C" secondAttribute="trailing" id="giz-ko-tLN"/>
                                                             <constraint firstItem="4U6-JB-Tba" firstAttribute="top" secondItem="yOO-nn-btQ" secondAttribute="top" id="iCQ-cV-9Tl"/>
-                                                            <constraint firstAttribute="width" constant="300" id="mkd-He-2mW"/>
+                                                            <constraint firstAttribute="width" constant="260" id="mkd-He-2mW"/>
                                                             <constraint firstAttribute="bottom" secondItem="4U6-JB-Tba" secondAttribute="bottom" id="owT-cy-3He"/>
                                                             <constraint firstItem="4U6-JB-Tba" firstAttribute="leading" secondItem="yOO-nn-btQ" secondAttribute="leading" id="vhe-z1-dwp"/>
                                                         </constraints>
@@ -861,13 +863,13 @@ all-in-one event app</string>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IFd-mp-5nM">
-                                                        <rect key="frame" x="340" y="0.0" width="300" height="226.5"/>
+                                                        <rect key="frame" x="300" y="0.0" width="260" height="197"/>
                                                         <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PBWS" translatesAutoresizingMaskIntoConstraints="NO" id="dhC-td-N2U">
-                                                                <rect key="frame" x="0.0" y="0.0" width="300" height="226.5"/>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PBWS" translatesAutoresizingMaskIntoConstraints="NO" id="dhC-td-N2U">
+                                                                <rect key="frame" x="0.0" y="0.0" width="260" height="197"/>
                                                             </imageView>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H2A-mF-FZJ">
-                                                                <rect key="frame" x="0.0" y="0.0" width="300" height="226.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="260" height="197"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain"/>
@@ -882,7 +884,7 @@ all-in-one event app</string>
                                                             <constraint firstAttribute="bottom" secondItem="H2A-mF-FZJ" secondAttribute="bottom" id="Wkd-I2-Fmp"/>
                                                             <constraint firstItem="H2A-mF-FZJ" firstAttribute="leading" secondItem="IFd-mp-5nM" secondAttribute="leading" id="Y02-tZ-ma5"/>
                                                             <constraint firstAttribute="trailing" secondItem="dhC-td-N2U" secondAttribute="trailing" id="cy9-4U-gpH"/>
-                                                            <constraint firstAttribute="width" constant="300" id="su8-M7-f92"/>
+                                                            <constraint firstAttribute="width" constant="260" id="su8-M7-f92"/>
                                                             <constraint firstItem="dhC-td-N2U" firstAttribute="leading" secondItem="IFd-mp-5nM" secondAttribute="leading" id="wTv-RZ-eR9"/>
                                                         </constraints>
                                                         <userDefinedRuntimeAttributes>
@@ -904,7 +906,7 @@ all-in-one event app</string>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rZV-pt-8Ny">
-                                                        <rect key="frame" x="650" y="0.0" width="20" height="226.5"/>
+                                                        <rect key="frame" x="570" y="0.0" width="20" height="197"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="20" id="JOm-rF-j2J"/>
@@ -931,7 +933,7 @@ all-in-one event app</string>
                                     <constraint firstItem="BFX-hX-BQF" firstAttribute="top" secondItem="Wik-c9-Lgi" secondAttribute="top" id="IaA-xY-ak5"/>
                                     <constraint firstAttribute="trailing" secondItem="7ip-Rq-d4u" secondAttribute="trailing" id="Qxb-Vo-e7i"/>
                                     <constraint firstItem="7ip-Rq-d4u" firstAttribute="top" secondItem="Wik-c9-Lgi" secondAttribute="top" id="hLB-Mx-YEB"/>
-                                    <constraint firstAttribute="height" constant="230" id="hOk-sl-Mi8"/>
+                                    <constraint firstAttribute="height" constant="200" id="hOk-sl-Mi8"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -945,7 +947,7 @@ all-in-one event app</string>
                             <constraint firstItem="qNb-3c-UKh" firstAttribute="bottom" secondItem="6B4-oN-SZ3" secondAttribute="bottom" constant="-4" id="BHY-zQ-GE7"/>
                             <constraint firstItem="xjg-9e-ubZ" firstAttribute="top" secondItem="kMf-a2-Wtr" secondAttribute="bottom" constant="15" id="EGU-Zs-zH0"/>
                             <constraint firstItem="x9N-AS-v5i" firstAttribute="trailing" secondItem="Db4-lZ-RiM" secondAttribute="trailing" id="Ktj-IM-gFD"/>
-                            <constraint firstItem="TGQ-fa-ESy" firstAttribute="top" secondItem="C5s-6l-aKg" secondAttribute="bottom" constant="10" id="TeR-RV-L3e"/>
+                            <constraint firstItem="TGQ-fa-ESy" firstAttribute="top" secondItem="C5s-6l-aKg" secondAttribute="bottom" constant="5" id="TeR-RV-L3e"/>
                             <constraint firstAttribute="bottom" secondItem="Db4-lZ-RiM" secondAttribute="bottom" id="VWu-ui-Icf"/>
                             <constraint firstItem="Db4-lZ-RiM" firstAttribute="top" secondItem="LU4-6j-9SJ" secondAttribute="top" id="WgK-Dv-JAU"/>
                             <constraint firstItem="6B4-oN-SZ3" firstAttribute="leading" secondItem="TGQ-fa-ESy" secondAttribute="leading" constant="5" id="aWd-26-g8B"/>
@@ -953,7 +955,7 @@ all-in-one event app</string>
                             <constraint firstItem="T7W-4p-uv9" firstAttribute="top" secondItem="TGQ-fa-ESy" secondAttribute="bottom" constant="10" id="diE-wt-Ozc"/>
                             <constraint firstItem="kMf-a2-Wtr" firstAttribute="trailing" secondItem="x9N-AS-v5i" secondAttribute="trailing" id="eLe-Cg-nI9"/>
                             <constraint firstAttribute="trailing" secondItem="Wik-c9-Lgi" secondAttribute="trailing" id="eU2-O1-ZGH"/>
-                            <constraint firstItem="kMf-a2-Wtr" firstAttribute="top" secondItem="6B4-oN-SZ3" secondAttribute="bottom" constant="15" id="eYy-X4-yEc"/>
+                            <constraint firstItem="kMf-a2-Wtr" firstAttribute="top" secondItem="6B4-oN-SZ3" secondAttribute="bottom" constant="10" id="eYy-X4-yEc"/>
                             <constraint firstItem="C5s-6l-aKg" firstAttribute="top" secondItem="x9N-AS-v5i" secondAttribute="top" constant="5" id="gcs-2I-aba"/>
                             <constraint firstItem="kMf-a2-Wtr" firstAttribute="leading" secondItem="x9N-AS-v5i" secondAttribute="leading" id="hBI-dr-BIE"/>
                             <constraint firstItem="TGQ-fa-ESy" firstAttribute="trailing" secondItem="C5s-6l-aKg" secondAttribute="trailing" id="lXb-Tf-PVc"/>
@@ -1018,7 +1020,7 @@ all-in-one event app</string>
             <objects>
                 <viewController id="AxI-wq-GJq" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Pag-bH-hx8">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="l1o-3q-b6q"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1034,7 +1036,7 @@ all-in-one event app</string>
             <objects>
                 <tabBarController id="rih-UO-5jJ" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="bjP-aW-1pq"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="rzQ-zP-llS">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" id="rzQ-zP-llS">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1083,9 +1085,6 @@ all-in-one event app</string>
         <image name="TicketIcon" width="25" height="25"/>
         <image name="UserIcon" width="37.5" height="37.5"/>
         <image name="greenroom" width="123" height="88"/>
-        <systemColor name="labelColor">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
