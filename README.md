@@ -2,9 +2,9 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
+  <!-- <a href="https://github.com/othneildrew/Best-README-Template">
     <img src="./logo_color.png" alt="Logo" height="80">
-  </a>
+  </a> -->
 
   <h3 align="center">Greenroom</h3>
 
@@ -28,7 +28,7 @@
 ## About The Project
 
 <!-- mobile -->
-<!-- ![Product Name Screen Shot]() -->
+![Mobile App](./mobile.jpg)
 
 Greenroom is an iOS app that makes tech event participation seamless by leveraging web3 identity primitives to maximise both the event creator and participant experiences before, during and after the event; event creation, vibe-check, leveraging/building on-chain reputation, seamless on-boarding and ticketing, automated payouts and smart-networking.
 
@@ -56,6 +56,9 @@ Why do we call it Greenroom? A greenroom is an away from the lights chill-out zo
 
 For this project, we decomposed it into multiple parts. First of all, we will have a smart contract managing the creation of new events, the joining system for the user... We build on ETH, our project is chain-agnostic so we can deploy on any EVM compatible chain. We decided to deploy it on ETH but also on Mantle for gas efficiency. This can be found in the `contract` folder.
 
+- Mentle contract: 0x240aF64dF76D214a80dd15d218eEB33d8c30643D
+- Goerli contract: 0xfe206A154FC0C4704Ae1a5b7ec0a9f2b7f7c4baF 
+
 ### Ticketing system
 
 When an event is created and the participant are register, we can then create tickets for them. We decided to create a NFT for each participant representing a dedicated ticker for the event. 
@@ -65,42 +68,28 @@ For the ticketing system, we decided to use the DappKit framework from LayerX. A
 > ./contract/scripts/event.ts
 
 
+### Mobile App
 
-
-
-A mobile app have also been designed for this purpose. The user can use a mobile application to have access to the current events, see the coming one. This app seek to leverage on-chain data, by gathering information on previous events that the person has done.
+A mobile app have been designed for this purpose. The user can use a mobile application to have access to the current events, see the coming one. This app seek to leverage on-chain data, by gathering information on previous events that the person has done.
 
 A match making system has been thinking but not implemented.
 
 
-## Smart Contract
-
-
-
-### Unstack system 
-
-To be sure that an 
-
-
-To avoid any bad behavior and scam for creating a new events, we imagine a stacking system for the event. This stacking system will first allow the limitation on the creaton of event. This will also can incite people to participate in the event as fund are lock to be sure that the event will be there. 
-Other approaches have come to mind about the checking part. 
-
-We also implement a ChainLink Automation system with a Time-base trigger. Indeed, when the event is finished, we want to unlock the stacking token of the owner. As we want to this process to be smooth as possible for the user, we do not want them additionnal interaction with the blockchain. Then, we think that a external trigger to unlock the token could be an interesting functionnality.
-
-We also imagine a system of stacking for the organizer of an event. This stacking system will force the creator to create an event, 
-
-
-## 
+### Event Manager 
 
 In the `frontend` repository, you will find a React framework using Rocketkit for the UI component. We create this web app only for event creation as it will be useful for organizer to plan the event information.
 
 
 
 
+### Unstack system 
 
 
+We also imagine a system of stacking for the organizer of an event. This stacking system will force the creator to create an event, 
 
+To avoid any bad behavior and scam for creating a new events, we imagine a stacking system for the event. This stacking system will first allow the limitation on the creaton of event. This will also can incite people to participate in the event as fund are lock to be sure that the event will be there. 
+Other approaches have come to mind about the checking part. 
 
-
+We also implement a ChainLink Automation system with a Time-base trigger. Indeed, when the event is finished, we want to unlock the stacking token of the owner. As we want to this process to be smooth as possible for the user, we do not want them additionnal interaction with the blockchain. Then, we think that a external trigger to unlock the token could be an interesting functionnality.
 
 
