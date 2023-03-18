@@ -11,15 +11,14 @@ contract EventContract is AutomationCompatibleInterface{
     uint public event_id = 0;
 
     struct Event {
-        string name;
         uint starting_date;
         uint ending_date;
         uint stacking; 
-        string location;
         address creator;
+        string name;
+        string metadata;   // Store an IPFS link to the metadata 
     }
 
-    // Store an IPFS link to metadata instead of the location
 
     mapping(uint => Event) eventsMapping;
     mapping(uint => address[]) eventAttendeesMapping;
@@ -29,7 +28,7 @@ contract EventContract is AutomationCompatibleInterface{
         uint starting_date, 
         uint ending_date, 
         string calldata name, 
-        string calldata location) public payable returns (uint eventid) {
+        string calldata metadata) public payable returns (uint eventid) {
 
         // Increase the unique id 
         event_id += 1;
@@ -44,7 +43,7 @@ contract EventContract is AutomationCompatibleInterface{
         // require(sent, "Failed to send Ether");
 
         // Create an event
-        Event memory currentEvent = Event(name, starting_date, ending_date, msg.value, location, creator);
+        Event memory currentEvent = Event(starting_date, ending_date, msg.value, creator, name, metadata);
 
         // Store the event
         eventsMapping[event_id] = currentEvent;
