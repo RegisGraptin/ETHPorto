@@ -40,7 +40,10 @@ export default function Event() {
         let account = accounts[0];
 
         // Contract information
-        let contract_address = "0x10AfB7bd9FF9836FAb357f9f7F48211f7211F116";
+
+        // let contract_address = "0x10AfB7bd9FF9836FAb357f9f7F48211f7211F116";
+
+        let contract_address = "0x2523a08099580AD38e14203B60A8005f52b6Ab3b";
 
 
         let url = "http://127.0.0.1:7545";
@@ -59,9 +62,9 @@ export default function Event() {
         let event_tx = await myContract.methods.createEvent(
             100,
             120,
-            "name",
-            "location",
-        ).send({from: account, gas: '1000000'})
+            "ETH Porto",
+            "IPFS://metadata",
+        ).send({from: account, gas: '1000000', value: "1000"})        
 
 
         // TODO :: Get the event id and check if it is good 

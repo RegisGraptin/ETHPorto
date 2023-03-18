@@ -17,13 +17,37 @@ npx hardhat run scripts/deploy.ts
 npx hardhat run scripts/deploy.ts --network goerli
 ```
 
+
+### Local Ganache
+
+
+```shell
+npx hardhat run scripts/deploy.ts --network ganache
+```
+
+### Mantle testnet
+
 Deploy on mantle 
 
 ```shell
-npx hardhat run scripts/deploy.ts --network mantle
+npx hardhat run scripts/deploy.ts --network mantle-testnet
 ```
 
-npx hardhat run scripts/deploy.ts --network ganache
+> Contract: 0x240aF64dF76D214a80dd15d218eEB33d8c30643D
+
+
+### Goerli testnet
+
+```shell
+npx hardhat run scripts/deploy.ts --network goerli
+```
+
+First contract : 0xfe206A154FC0C4704Ae1a5b7ec0a9f2b7f7c4baF 
+with chainlink trigger implementation
+
+
+
+
 
 
 Contract Address on Goerli
@@ -33,4 +57,3 @@ Contract Address on Goerli
 Ganache : 0x7D88482508EcaEd989C11029ed56364A9638F62C
 
 
-0xfe206A154FC0C4704Ae1a5b7ec0a9f2b7f7c4baF
