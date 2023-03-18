@@ -45,7 +45,7 @@ TODO :: present our project
 
 For this project, we decomposed it into multiple parts. First of all, we will have a smart contract managing the creation of new events, the joining system for the user.
 
-This smart contract can be deployed in Ethereum, but it can also be deployed on Mentle for gas efficiency.
+This smart contract can be deployed in Ethereum, but it can also be deployed on Mantle for gas efficiency.
 
 To avoid any bad behavior and scam for creating a new events, we imagine a stacking system for the event. This stacking system will first allow the limitation on the creaton of event. This will also can incite people to participate in the event as fund are lock to be sure that the event will be there. 
 Other approaches have come to mind about the checking part. 
