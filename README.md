@@ -58,7 +58,7 @@ Why do we call it Greenroom? A greenroom is an away from the lights chill-out zo
 
 For this project, we decomposed it into multiple parts. First of all, we will have a smart contract managing the creation of new events, the joining system for the user... We build on ETH, our project is chain-agnostic so we can deploy on any EVM compatible chain. We decided to deploy it on ETH but also on Mantle for gas efficiency. This can be found in the `contract` folder.
 
-- Mentle contract: 0x240aF64dF76D214a80dd15d218eEB33d8c30643D
+- Mantle contract: 0x240aF64dF76D214a80dd15d218eEB33d8c30643D
 - Goerli contract: 0xfe206A154FC0C4704Ae1a5b7ec0a9f2b7f7c4baF 
 
 ### Ticketing system
